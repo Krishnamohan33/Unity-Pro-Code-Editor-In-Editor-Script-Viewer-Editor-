@@ -1,20 +1,46 @@
 # 🧠 Pro Code Editor — Unity Editor Extension
 
-**Pro Code Editor** is a lightweight, in-editor script viewer and editor for Unity.  
-Designed for quick edits, reviewing code, or scripting small changes — right inside the Unity Editor.
+[![Unity](https://img.shields.io/badge/Unity-2021%2B-black?logo=unity)](https://unity.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/Krishnamohan33/ProCodeEditor?style=social)](https://github.com/Krishnamohan33/ProCodeEditor)
+[![Made with ❤️](https://img.shields.io/badge/made%20with-%E2%9D%A4-red)](https://github.com/Krishnamohan33)
 
-Built with ❤️ by [Krishnamohan Yagneswaran](https://github.com/Krishnamohan33)
+---
+
+**Pro Code Editor** is a lightweight yet powerful in-editor code viewer and editor for Unity.  
+Ideal for quick script edits, shader tweaks, or reading code — without leaving the Unity Editor.
 
 ---
 
 ## ✨ Features
 
-- 🗂️ Open `.cs`, `.txt`, and `.shader` files directly from the Unity Editor  
-- 📝 Built-in text editor for live editing  
-- 💾 Save changes instantly and refresh the Asset Database  
-- 📜 Clean, scrollable code view with change tracking  
-- 🙌 Friendly UI integrated into Unity’s `Tools` menu  
-- 🔒 Prevents accidental loss with unsaved changes tracking  
+- 🗂️ Open `.cs`, `.txt`, and `.shader` files directly in Unity
+- 📝 Rich-text style editing interface
+- 💾 Save changes with one click (AssetDatabase auto-refresh)
+- 🔄 Change tracking with `isDirty` flag
+- 🪟 Integrated into Unity’s `Tools` menu
+- 👨‍💻 Developer-friendly UI, supports scroll and autosizing
+- 🔒 Prevents accidental loss with unsaved change tracking
+
+---
+
+## 🚀 Pro Premium Edition (Coming Soon)
+
+Upgrade to **Pro Code Editor Premium** for advanced features:
+
+| Feature                                | Free | Premium |
+|----------------------------------------|:----:|:-------:|
+| Open/Save `.cs`, `.txt`, `.shader`     | ✅   | ✅      |
+| Syntax Highlighting (C#, ShaderLab)    | ❌   | ✅      |
+| Line Numbering                         | ❌   | ✅      |
+| Find & Replace                         | ❌   | ✅      |
+| Custom Themes (Dark/Light)             | ❌   | ✅      |
+| Git Diff Integration                   | ❌   | ✅      |
+| Tabbed Editor UI                       | ❌   | ✅      |
+| Undo/Redo Stack                        | ❌   | ✅      |
+| Auto Backup on Save                    | ❌   | ✅      |
+
+> 🎁 Want early access to the Premium build? Reach out via [GitHub Discussions](https://github.com/Krishnamohan33/ProCodeEditor/discussions)
 
 ---
 
@@ -22,71 +48,59 @@ Built with ❤️ by [Krishnamohan Yagneswaran](https://github.com/Krishnamohan3
 
 ### 1. Installation
 
-Copy the `ProCodeEditor.cs` script into an `Editor` folder inside your Unity project:
+> ⚠️ Unity only compiles editor tools inside folders named `Editor`.
 
+### 2. Open the Editor
 
-> ℹ️ The script **must** be placed inside an `Editor` folder. Unity only compiles editor scripts placed in such folders.
-
-### 2. Usage
-
-- Open Unity
 - Navigate to `Tools > Pro Code Editor`
-- Click **Open** to load a `.cs`, `.txt`, or `.shader` file
-- Edit the content freely
-- Click **Save** to write changes back to the file
+- Click **Open** to load a file
+- Edit and **Save** when done!
 
 ---
 
-## 🖥️ UI Overview
+## 🖥️ Toolbar Overview
 
 | Button     | Description                                 |
 |------------|---------------------------------------------|
-| **Open**   | Opens a file picker to choose a code file   |
-| **Save**   | Saves changes back to the file              |
-| **Label**  | Displays current file name (if any)         |
-
-The editor automatically tracks unsaved changes, helping prevent data loss.
+| **Open**   | Choose a `.cs`, `.txt`, or `.shader` file   |
+| **Save**   | Writes file content and refreshes assets    |
+| **Label**  | Displays the currently opened filename      |
 
 ---
 
-## ⚙️ Code Breakdown
+## ⚙️ Developer Notes
 
 ### `ShowEditor()`
-Initializes and displays the editor window.
+
+Creates and displays the EditorWindow.
 
 ### `OnGUI()`
-Draws the editor UI including the scrollable text area and footer.
+
+Draws UI layout: scroll view, text area, and footer.
 
 ### `DrawToolbar()`
-Renders the top toolbar with Open, Save buttons and file name display.
+
+Top bar with open/save and current file name.
 
 ### `DrawFooter()`
-Adds a simple footer with author credit and a GitHub link.
+
+Author credit with clickable GitHub link (uses rich text).
 
 ### `LoadFile(path)`
-Reads and loads the selected file content.
+
+Reads file content into editor.
 
 ### `SaveFile()`
-Writes updated content to the original file and refreshes the AssetDatabase.
+
+Writes changes and refreshes Unity's `AssetDatabase`.
 
 ---
 
-## 🙋‍♂️ Why Use This?
+## 📎 Limitations (Free Version)
 
-While full IDEs like Visual Studio or Rider are powerful, sometimes you just need:
-
-- A quick fix in a script
-- A glance at shader logic
-- Lightweight editing while testing in Play Mode
-
-**Pro Code Editor** is ideal for fast, in-Unity edits.
-
----
-
-## 📎 Limitations
-
-- This is a **plain text editor** — no syntax highlighting or autocomplete
-- Not a replacement for a full IDE (but a handy complement)
+- No syntax highlighting or IntelliSense
+- No multi-file or tabbed interface
+- No undo/redo support (yet)
 
 ---
 
@@ -99,8 +113,25 @@ While full IDEs like Visual Studio or Rider are powerful, sometimes you just nee
 
 ## 📄 License
 
-This project is licensed under the MIT License — free to use, modify, and distribute.
+[MIT](LICENSE) — free to use, modify, and distribute.
 
 ---
 
+## 💬 Feedback / Contribute
+
+Pull requests, feedback, and feature requests are welcome!  
+👉 [Start a discussion](https://github.com/Krishnamohan33/ProCodeEditor/discussions)
+
+---
+
+## 🔮 Coming Soon
+
+- VS Code plugin sync
+- Unity Console integration
+- Autoformatting with Roslyn
+
+Stay tuned!
+
+
+Drop the script into any `Editor` folder in your Unity project.
 
